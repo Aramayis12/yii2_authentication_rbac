@@ -45,7 +45,7 @@ DashboardAsset::register($this);
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>SJADS</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -145,6 +145,11 @@ DashboardAsset::register($this);
             <i class="fa fa-th-list"></i> <span>Categories</span>
           </a>
         </li>
+        <li>
+          <a href="<?= URL::to('rbac/default/index')?>">
+            <i class="fa fa-th-list"></i> <span>Users</span>
+          </a>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -158,15 +163,16 @@ DashboardAsset::register($this);
         Dashboard
         <small>Control panel</small>
       </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
-      </ol>
+      <?= Breadcrumbs::widget([
+            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+        ]) ?>
+        <?= Alert::widget() ?>
+        
     </section>
 
     <!-- Main content -->
     <section class="content">
-      <h2>Text</h2>
+       <?= $content ?>
     </section>
     <!-- /.content -->
   </div>

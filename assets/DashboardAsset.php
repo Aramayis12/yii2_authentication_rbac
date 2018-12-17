@@ -34,7 +34,7 @@ class DashboardAsset extends AssetBundle
         'css/site.css',
     ];
     public $js = [
-        'js/jquery.min.js',
+        // 'js/jquery.min.js',
         'js/jquery-ui.min.js',
         'js/default.js',
         'css/bootstrap/js/bootstrap.min.js',
@@ -55,7 +55,7 @@ class DashboardAsset extends AssetBundle
         'js/demo.js'
     ];
     public $depends = [
-        // 'yii\web\YiiAsset',
-        // 'yii\bootstrap\BootstrapAsset',
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
     ];
 }
