@@ -79,6 +79,9 @@ $config = [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
             'site/*',
+            'admin/*',
+            'rbac/*',
+            'gii/*',
         ]
     ],
     'params' => $params,

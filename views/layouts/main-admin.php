@@ -136,17 +136,12 @@ DashboardAsset::register($this);
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active">
-          <a href="<?= URL::to('admin/index')?>">
+          <a href="<?= URL::to('/admin/default/index')?>">
             <i class="fa fa-th"></i> <span>Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="<?= URL::to('admin/categories')?>">
-            <i class="fa fa-th-list"></i> <span>Categories</span>
-          </a>
-        </li>
-        <li>
-          <a href="<?= URL::to('rbac/default/index')?>">
+          <a href="<?= URL::to('/rbac/default/index')?>">
             <i class="fa fa-th-list"></i> <span>Users</span>
           </a>
         </li>
